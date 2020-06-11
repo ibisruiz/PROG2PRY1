@@ -1,0 +1,27 @@
+﻿@model PROG2PRY1.Models.T_Categoria
+
+@{
+    ViewBag.Title = "Categorias";
+}
+
+<h2>Clientes</h2>
+<p></p>
+<h5 class="font-italic">Detalle cliente</h5>    
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }, new { @class = "btn btn-secondary" }) 
+    @Html.ActionLink("Volver", "Index", new { id = Model.ID }, new { @class = "btn btn-info" })
+</p>

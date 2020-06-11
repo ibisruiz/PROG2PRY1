@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/src/custome-style.css" />
+</head>
+<body style="background-color: #F5F5DC;">
+
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Clientekks", "Index", "T_Clientes", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        @Html.ActionLink("Productos", "Create", "T_Productos", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Categorias", "Create", "T_Categoria", new { area = "" }, new { @class = "navbar-brand" })
+
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+
+
+    @*********************PROBANDO NEW  NAVEGATION BAR***************@
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F5F5DC;">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                @*<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Features</a>
+                    <a class="nav-item nav-link" href="#">Pricing</a>
+                    <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>*@
+                <ul class="nav navbar-nav" style="font-weight: 900 ;">
+                    @Html.ActionLink("Clientes", "Index", "T_Clientes", new { area = "" }, new { @class = "navbar-brand nav-item nav-link" })
+                    @Html.ActionLink("Productos", "Index", "T_Productos", new { area = "" }, new { @class = "navbar-brand nav-item nav-link" })
+                    @Html.ActionLink("Categorias", "Index", "T_Categoria", new { area = "" }, new { @class = "navbar-brand nav-item nav-link" })
+
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    @*********************PROBANDO NEW  NAVEGATION BAR***************@
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Ibis Ruiz 2017-4572 || Alfredo Linarez 2017-4800</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

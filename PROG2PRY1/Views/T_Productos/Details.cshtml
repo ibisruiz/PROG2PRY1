@@ -1,0 +1,51 @@
+﻿@model PROG2PRY1.Models.T_Productos
+
+@{
+    ViewBag.Title = "Productos";
+}
+<h2>Productos</h2>
+<p></p>
+<h5 class="font-italic">Detalles del producto</h5>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Categoria.Descripion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Categoria.Descripion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Clientes.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Clientes.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }, new { @class = "btn btn-secondary" })
+    @Html.ActionLink("Volver", "Index", new { id = "" }, new { @class = "btn btn-info" })
+</p>
